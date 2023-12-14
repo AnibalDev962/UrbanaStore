@@ -1,0 +1,10 @@
+company name: Urbana Store
+slogan: Your style our pasion
+
+location: USA
+
+products:[shoes,pants,shirts,watches,joulery,glasses,backbagas,perfume];
+
+
+
+
