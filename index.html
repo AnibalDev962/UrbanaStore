@@ -6,20 +6,83 @@
     <title>Urbana Store</title>
     <!-- TYLE -->
     <link rel="stylesheet" href="/scss/main.scss">
+    <link rel="shortcut icon" href="src/img/logo/finalfavicon.png" type="image/x-icon" />
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Montserrat:wght@200;300;500&family=Mrs+Saint+Delafield&family=Pinyon+Script&family=Roboto:wght@300;500&family=Rock+Salt&display=swap" rel="stylesheet">
     <!-- Script -->
-    <script type="module" src="/script/control.js"></script>
+    <script src="/script/control.js" type="module"></script>
 
 </head>
 <body>
     <header>
+        <div class="header-logos-container">
+            <div class="header-logos-container__social-media-logos">
+                <ion-icon class="header-logos-container__social-media-logos__logo" name="logo-facebook"></ion-icon>
+                <ion-icon class="header-logos-container__social-media-logos__logo" name="logo-instagram"></ion-icon>
+                <ion-icon class="header-logos-container__social-media-logos__logo" name="logo-twitter"></ion-icon>
+                <ion-icon class="header-logos-container__social-media-logos__logo" name="logo-youtube"></ion-icon>
+            </div>
+            <img class="header-logos-container__main-logo" src="/src/img/logo/finalLogo.png">
 
+
+        </div>
+        <nav>
+            <ul class="nav__links">
+                <li class="nav__links__item  selected-link">
+                    <a class="nav__links__item__link">home</a>
+                </li>
+                <li class="nav__links__item">
+                    <a class="nav__links__item__link">products</a>
+                </li>
+                <li class="nav__links__item">
+                    <a class="nav__links__item__link">contact us</a>
+                </li>
+                <li class="nav__links__item">
+                    <a class="nav__links__item__link">staff</a>
+                </li>
+                <li class="nav__links__item">
+                    <a class="nav__links__item__link">how to buy?</a>
+                </li>
+            </ul>
+        </nav>
     </header>
     <main>
+        <div class="slider">
+
+            <div class="slider__slide">
+                <div class="slider__slide__article">
+                  <img src="/src/img/poeple/pl2.webp" class="testimg">
+                  <h1>hello world</h1>
+        
+              </div>
+            </div>
+    
+            <div class="slider__slide">
+              <div class="slider__slide__article">
+      
+              </div>
+            </div>
+    
+            <div class="slider__slide">
+              <div class="slider__slide__article">
+        
+              </div>
+            </div>
+    
+            <button class="slider__btn slider__btn--left">&larr;</button>
+            <button class="slider__btn slider__btn--right">&rarr;</button>
+            <div class="dots"></div>
+          </div>
+        </section>
 
     </main>
     <footer>
         
     </footer>
+  <!--   <script  src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script> -->
     
 </body>
 </html>

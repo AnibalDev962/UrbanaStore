@@ -1,0 +1,40 @@
+nav{
+    
+    margin-top: $margin-top-default;
+
+    .nav__links{//this is the container
+        
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        gap: 3rem;
+
+
+        &__item{
+            
+            font-size: $default-font-size;
+            padding: 1rem 2rem 1rem 2rem;
+            list-style: none;
+
+            border-radius: $border-radious-buttons;
+
+            &:hover{
+                cursor: pointer;
+            }
+
+            &__link{
+                
+                padding-top: 1rem;
+            }
+        }
+    }
+   
+};
+
+//NAV FUNCTIONALITY//
+
+.selected-link{
+    background-color: $main-color;
+}

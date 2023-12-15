@@ -1,0 +1,41 @@
+.header-logos-container{
+    
+    max-width: 140rem;
+    margin: 0  auto 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+
+    &__social-media-logos{
+        
+        position: absolute;
+        left: 0;
+
+        &__logo{
+            font-size: 2rem;
+            margin-left: 1.5rem;
+            color: $main-color;
+            transition: all 0.3s;
+
+            &:hover{
+                cursor: pointer;
+                color: $main-color-dark;
+                transition: all 0.3s;
+            }
+
+        }
+
+        
+    }
+    &__main-logo{
+        height: 9rem;
+    }
+
+
+
+
+
+}

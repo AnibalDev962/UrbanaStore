@@ -1,1 +1,2 @@
-console.log('hello world');
+import * as viewData from './view/view.js';
+
