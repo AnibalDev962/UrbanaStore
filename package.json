@@ -2,7 +2,7 @@
   "name": "urbana-store",
   "version": "1.0.0",
   "description": "Style and Fashion Store project",
-  "main": "index.js",
+  "default": "index.html",
   "scripts": {
     "start": "parcel index.html",
     "build": "parcel build index.html"
