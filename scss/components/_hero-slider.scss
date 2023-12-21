@@ -1,7 +1,8 @@
 
 
 /* SLIDER */
-.slider {
+
+.slider { //container//
   margin-top: $margin-top-default ;
   margin-left: auto;
   margin-right: auto;
@@ -17,7 +18,7 @@
     overflow: hidden; 
 
 
-    &__slide {
+    &__slide { //item//
       background-color: rgb(138, 115, 182);
       position: absolute;
       top: 0;
@@ -131,7 +132,7 @@
     /* background-color: #fff; */
     background-color: #888;
     opacity: 1;
-  }
+  };
   
 
   
