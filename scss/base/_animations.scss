@@ -1,0 +1,62 @@
+///SLIDER ANIMATIONS///
+
+@keyframes move-to-right{
+    0%{transform: translateX(0%);
+    z-index: 1;}
+    100%{transform: translateX(100%);
+    z-index: 1;}
+}
+
+.move-to-right{
+    animation-name: move-to-right;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+
+}
+
+@keyframes move-to-left{
+    0%{transform: translateX(0%);
+    z-index: 1;
+    }
+    100%{transform: translateX(-100%);
+    z-index: 1;}
+}
+
+.move-to-left{
+    animation-name: move-to-left;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+
+}
+
+
+@keyframes bring-from-left{
+    0%{transform: translateX(-100%);
+    z-index: 1;
+    }
+    100%{transform: translateX(0%);
+    z-index: 1;}
+}
+
+.bring-from-left{
+    animation-name: bring-from-left;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+
+}
+
+
+@keyframes bring-from-right{
+    0%{transform: translateX(100%);
+    z-index: 1;
+    }
+    100%{transform: translateX(0%);
+    z-index: 1;}
+}
+
+.bring-from-right{
+    animation-name: bring-from-right;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+
+}
