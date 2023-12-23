@@ -111,7 +111,7 @@
   
   .dots__dot {
     border: none;
-    background-color: #581212;
+    background-color: #bdbdbd;
     opacity: 0.7;
     height: 1rem;
     width: 3rem;
@@ -123,7 +123,7 @@
     z-index: 5;
   
     /* Only necessary when overlying images */
-    box-shadow: 0 0.6rem 1.5rem rgba(0, 0, 0, 0.7); 
+    box-shadow: 0 0.6rem 1.5rem rgba(158, 158, 158, 0.7); 
   }
   
   .dots__dot:last-child {
@@ -138,7 +138,11 @@
   
 
   ////FUNCTIONALITY///
-  .active{
+  .active{//slider being active at view//
     position: absolute;
     z-index: 1;
 };
+
+.active-dot{
+  background-color: rgb(216, 216, 216);
+}

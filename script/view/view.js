@@ -1,34 +1,32 @@
 ///SLIDER COMPONENT//
-/* 
+
 export const sliderView={
     //selecting dom elements//
     slides:document.querySelectorAll('.slider__slide'),
     buttonNext:document.querySelector('.slider__btn--right'),
     buttonPrev:document.querySelector('.slider__btn--left'),
     dotsContainer:document.querySelector('.dots'),
+     
+    //slider view variables///
+
+    pos:0,
+    /* slidesAmount *///this gets defined by the function//
+    sliderLenght:this.slides.lenght,
+
 
     //slider Functions//
 
     createDotsFunction: function(){
+        const sliders=this.slides;
+        const dotContainer=this.dotsContainer;
         console.log('executed')
-        this.slides.forEach(function(s,i){
-          console.log(this.dotsContainer);
+        sliders.forEach(function(s,i){
+            dotContainer.insertAdjacentHTML('beforeend',`<button class="dot-${i} dots__dot"></button>`);
             
         })
     },
 
-    
 
-}; */
 
-const slides=document.querySelectorAll('.slider__slide');
-const dotsContainer=document.querySelector('.dots');
-
-export const  createDotsFunction = function(){
-    console.log('executed')
-    slides.forEach(function(s,i){
-        dotsContainer.insertAdjacentHTML('beforeend',`<button class="dot-${i} dots__dot"></button>`);
-      
-    })
-};
+}; 
 
