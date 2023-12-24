@@ -1,5 +1,5 @@
 import * as controlData from './control.js';
-import * as viewData from './view/view.js';
+import * as sliderData from './view/sliderView.js';
 
 
 export let state={

@@ -1,4 +1,4 @@
-import * as viewData from './view/view.js';
+import * as sliderData from './view/sliderView.js';
 import * as stateData from '../script/state.js'
 
 //dependencies/
@@ -8,10 +8,9 @@ import 'regenerator-runtime/runtime.js'; ///these two are to support old browser
 
 //Controlling slider component///
 
-//step 1 creating dots///
-
-viewData.sliderView.createDotsFunction();
-//step 2 defining how many sliders there are//
-
+//step1 creating dots//
+sliderData.createDotsFunction();
+//step2 initial delay/
+sliderData.delayerFunction();
 
 
