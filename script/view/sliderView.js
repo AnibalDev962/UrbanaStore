@@ -164,4 +164,4 @@ export const goToSlide=function(pos,direction){
         goToSlide(pos,'right')
     };
 
-  },10000);
+  },4000);

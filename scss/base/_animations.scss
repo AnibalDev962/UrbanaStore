@@ -60,3 +60,47 @@
     animation-fill-mode: forwards;
 
 }
+
+@keyframes spin{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.spin-animation{
+animation-name: spin;
+animation-duration: 120s;
+animation-timing-function: linear;
+animation-iteration-count: infinite;
+
+}
+
+@keyframes move-to-right-for-van{
+
+    0%{
+        transform: translateX(0rem);
+    }
+
+    100%{
+        transform: translateX(30rem);
+    }
+
+};
+
+
+@keyframes hero-text-animation{
+    0%{
+        text-shadow:2px 2px 10px grey;
+    }
+
+    50%{
+        text-shadow:4px 4px 20px rgb(255, 255, 255);
+    }
+    100%{
+        text-shadow:2px 2px 10px grey;
+    }
+
+}
