@@ -34,6 +34,8 @@ export const createDotsFunction=function(){
             console.log('returned')
             return;
           }
+
+          clearInterval(sliderInterval);
       
           dotPreviouslySelected=pos;
           newDot=i;
