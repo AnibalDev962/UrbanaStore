@@ -31,7 +31,6 @@ export const createDotsFunction=function(){
     
         d.addEventListener('click',function(){
           if(delayer===true){
-            console.log('returned')
             return;
           }
 
@@ -39,9 +38,6 @@ export const createDotsFunction=function(){
       
           dotPreviouslySelected=pos;
           newDot=i;
-          console.log(`dot previously selected= ${dotPreviouslySelected}`);
-          console.log(newDot);
-          console.log(`dots lenght ${dotsLenght}`);
       
           if(dotPreviouslySelected===dotsLenght && newDot===0){
             
@@ -73,7 +69,6 @@ export const createDotsFunction=function(){
 export const goToSlide=function(pos,direction){
     
     let itemNumber=pos;
-    console.log(itemNumber);
     let newElClass='';
     let elToGoAway='';
     
@@ -100,6 +95,11 @@ export const goToSlide=function(pos,direction){
   }
   delayer=true;
   delayerFunction();
+
+  activeDot(pos);
+
+  console.log(`position ${pos}`)
+  
 
 };
 
@@ -165,3 +165,20 @@ export const goToSlide=function(pos,direction){
     };
 
   },4000);
+
+
+export const activeDot=function(dotNumber){
+ /*  active-dot */
+ 
+ let dotEls=dots;
+ let dotToActivate=dotNumber;
+
+ console.log(`pos required in function ${dotNumber}`)
+ dotEls.forEach(function(d,i){
+  d.classList.remove('active-dot');
+  d.classList.contains(`dot-${dotToActivate}`)? dotToActivate=d:'';
+
+ })
+ dotToActivate.classList.add('active-dot');
+}
+

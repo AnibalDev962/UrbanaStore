@@ -12,5 +12,7 @@ import 'regenerator-runtime/runtime.js'; ///these two are to support old browser
 sliderData.createDotsFunction();
 //step2 initial delay/
 sliderData.delayerFunction();
+//step 3/ activating initial dot
+sliderData.activeDot(0);
 
 
