@@ -23,19 +23,6 @@
     
   
 
-    &__img{
-        width: 100%;
-        filter: grayscale(100%) blur(0.8px);
-        transition: all 0.4s;
-        &:hover{
-            filter: none;
-            transform: scale(1.1);
-            transition: all 0.4s;
-            cursor: pointer;
-        }
-     
-    }
-
     &__text{
         position: absolute;
         z-index: 2;
@@ -48,6 +35,8 @@
         font-weight:200;
         text-shadow: 2px 2px 5px $main-color;
     };
+
+   
 
    }
 
@@ -64,18 +53,6 @@
     position: relative;
    
 
-    &__img{
-        transform:scale(1.2);
-        filter: grayscale(100%) blur(0.8px);
-        transition: all 0.4s;
-        &:hover{
-            filter: none;
-            transform: scale(1.3);
-            transition: all 0.4s;
-            cursor: pointer;
-        }
-         
-     };
      &__text{
         position: absolute;
         z-index: 2;
@@ -87,6 +64,7 @@
         font-family: 'Rock Salt';
         font-weight:200;
         text-shadow: 2px 2px 5px $main-color;
+        
     };
 
     
@@ -98,25 +76,6 @@
     display: flex;
     overflow: hidden;
     position: relative;
-    
-
-  
-    
-    &__img{
-        width: 100%;
-        object-fit: cover;
-        filter: grayscale(100%) blur(0.8px);
-        transition: all 0.4s;
-
-        &:hover{
-            filter: none;
-            transform: scale(1.1);
-            transition: all 0.4s;
-            cursor: pointer;
-
-        };
-        
-     };
 
      &__text{
         position: absolute;
@@ -131,8 +90,37 @@
         font-family: 'Rock Salt';
         font-weight:200;
     };
-
-    
-   }
+  
+   };
 
 };
+
+///GENDER SELECTION FUNCTIONALITY//
+
+.gender-selection__hit-box{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+
+    &:hover{
+        cursor: pointer;
+    }
+
+}
+
+
+.gender-selection__img{
+    width: 100%;
+    object-fit: cover;
+    filter: grayscale(100%) blur(0.8px);
+    transition: all 0.4s;
+};
+ .hovering{
+    filter: none;
+    transform: scale(1.2);
+    transition: all 0.4s;
+    cursor: pointer;
+
+}; 

@@ -1,5 +1,6 @@
 import * as sliderData from './view/sliderView.js';
 import * as stateData from '../script/state.js'
+import * as genderSelectionData from '../script/view/genderSelectionview.js'
 
 //dependencies/
 
@@ -15,4 +16,7 @@ sliderData.delayerFunction();
 //step 3/ activating initial dot
 sliderData.activeDot(0);
 
+//contorling gender selection section///
+
+genderSelectionData.hoveringFunctionality(); 
 

@@ -98,15 +98,14 @@ export const goToSlide=function(pos,direction){
 
   activeDot(pos);
 
-  console.log(`position ${pos}`)
-  
+
 
 };
 
  export const delayerFunction= async function(){
     setTimeout(function(){
      delayer=false;
-     console.log(delayer);
+   
     },1000);
  }
 
@@ -172,8 +171,6 @@ export const activeDot=function(dotNumber){
  
  let dotEls=dots;
  let dotToActivate=dotNumber;
-
- console.log(`pos required in function ${dotNumber}`)
  dotEls.forEach(function(d,i){
   d.classList.remove('active-dot');
   d.classList.contains(`dot-${dotToActivate}`)? dotToActivate=d:'';
