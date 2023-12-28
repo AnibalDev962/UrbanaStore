@@ -3,7 +3,7 @@
     height: 50rem;
 
     max-width: 150rem;
-    margin: $margin-top-default auto 50rem auto;
+    margin: $margin-top-default auto 0 auto;
     
 
  
@@ -117,6 +117,9 @@
     filter: grayscale(100%) blur(0.8px);
     transition: all 0.4s;
 };
+
+
+
  .hovering{
     filter: none;
     transform: scale(1.2);
