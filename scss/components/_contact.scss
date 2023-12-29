@@ -1,0 +1,77 @@
+.contact-section{
+    margin-top: $margin-top-default;
+    height: 46rem;
+    width: 100%;
+    background-color: rgb(119, 119, 119);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:5rem;
+    position: relative;
+
+    &__header{
+        position: absolute;
+        top: 2rem;
+        font-family: 'Gochi Hand';
+        color: rgb(223, 223, 223);
+        font-size: 6rem;
+
+
+    }
+
+    &__customer-service-picture{
+        margin-top: 6rem;
+        background-image: url(/src/img/poeple/pl-call-center.jpg);
+        background-position:center;
+
+        background-size:cover;
+
+        height: 30rem;
+        width: 30rem;
+
+        border-radius: 50%;
+
+    }
+
+    &__contact-items{
+        
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
+        gap: .9rem;
+
+        &__item{
+            background-color: transparent;
+            border: none;
+            font-size: 3rem;
+            font-family: "Montserrat";
+            color: white;
+           
+            padding-bottom: 2rem;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            border-radius: 5rem;
+            transition: all 0.5s;
+            transform: translateY(2.4rem);
+            
+
+            &:hover{
+                background-color: $main-color;
+                cursor: pointer;
+                transition: all 0.3s;
+            }
+
+        }
+        
+
+    }
+
+
+}
+
+.contact-section-icon{
+    margin-right: 2rem;
+    font-size: 5rem;
+    transform: translateY(1.2rem); 
+
+}

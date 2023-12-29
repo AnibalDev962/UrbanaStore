@@ -6,9 +6,7 @@ $main-color-dark: rgb(139, 63, 123);//this color matched the logo//
 $main-color-light: rgb(165, 115, 154);//this color matched the logo//
 
 ///fonts///
-  $default-font-size:2rem; //nav//
-
-
+$default-font-size:2rem; //nav//
 
 ///SPACING///
  $margin-top-default:2rem;
@@ -16,3 +14,13 @@ $main-color-light: rgb(165, 115, 154);//this color matched the logo//
  //border radios//
 
  $border-radious-buttons:0.7rem;
+
+ //Prodcuts section//
+
+ @mixin card-hovering-state{
+        cursor: pointer;
+        transform: rotate(0deg) scale(1.3);
+        transition: all 0.3s; 
+        z-index: 10;
+        box-shadow: 1px 1px 7px rgb(158, 158, 158);
+ }

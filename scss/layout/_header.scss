@@ -13,11 +13,16 @@
         
         position: absolute;
         left: 0;
+        top:3rem;
+    
 
         &__logo{
             font-size: 2rem;
-            margin-left: 1.5rem;
+
             color: $main-color;
+            padding: 1rem;
+
+            
             transition: all 0.3s;
 
             &:hover{
@@ -25,17 +30,10 @@
                 color: $main-color-dark;
                 transition: all 0.3s;
             }
-
         }
-
-        
     }
     &__main-logo{
         height: 9rem;
     }
-
-
-
-
 
 }
