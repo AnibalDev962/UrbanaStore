@@ -22,11 +22,11 @@ export const hoveringFunctionality=function(){
        
         e.addEventListener('mouseover',function(){
             activatingImage(i,'activate'); 
-            console.log('mouse in'); 
+            
         }); 
         e.addEventListener('mouseout',function(){
             activatingImage(i,'remove'); 
-            console.log('mouse out'); 
+           
         })  
 
     })
