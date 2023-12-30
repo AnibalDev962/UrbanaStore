@@ -1,0 +1,65 @@
+.features{
+    
+    height: 50rem;
+    width: 100%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+
+    &__safe-purchase{
+        height: 100%;
+        width:40rem;
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap:4rem;
+
+        
+
+        &__text{
+            font-size: 4rem;
+            font-weight: 400;
+        }
+    }
+
+    &__free-shipping{
+        height: 100%;
+        width:40rem;
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap:4rem;
+        &__text{
+            font-size: 4rem;
+            font-weight: 400;
+        }
+
+    }
+    &__discounts{
+        height: 100%;
+        width:40rem;
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap:4rem;
+        &__text{
+            font-size: 4rem;
+            font-weight: 400;
+        }
+
+    }
+
+}
+
+.features-section-icon{
+    font-size: 15rem;
+    color:$main-color
+}

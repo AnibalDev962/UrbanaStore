@@ -1,0 +1,9 @@
+ //Prodcuts section//
+
+ @mixin card-hovering-state{
+    cursor: pointer;
+    transform: rotate(0deg) scale(1.3);
+    transition: all 0.3s; 
+    z-index: 10;
+    box-shadow: 1px 1px 7px rgb(158, 158, 158);
+}
