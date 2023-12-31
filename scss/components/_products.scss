@@ -4,10 +4,21 @@
     margin-right: auto;
     height: 60rem;
     width: 100%;
+
+    @include respond(tab-port){
+        height: 40rem;
+    }
+
+    @include respond(phone){
+        height: auto;
+        overflow-x: hidden;
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
    
 
     &__container{
-        max-width:130rem;
+        max-width:110rem;
         height: 100%;
         margin-left: auto;
         margin-right: auto;
@@ -17,23 +28,60 @@
         align-items: center;
         gap:1rem;
 
+        @include respond(tab-land){
+            max-width: 90rem;
+        }
+
+        @include respond (tab-port){
+            max-width: 60rem;
+        }
+
+        @include respond (phone){  
+            
+            max-width: 60rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(8rem,1fr));
+            
+        }
+
+        
+
         &__card{
             
-            height: 37rem;
+            height: 35rem;
             width: 27rem;
             border-radius: .7rem;
             position: relative;
             box-shadow: 3px 3px 9px rgb(143, 143, 143);
 
+            @include respond (tab-land){
+                height: 30rem;
+            }
+            
+            @include respond (tab-port){
+                 height: 20rem;
+            }
+
+            @include respond (phone){  
+               width: 10rem;
+               z-index: 10;
+            }
+
         
             &__img-container{
                 background-color: white;
-                height: 30rem;
+                height: 27rem;
                 width: 90%;
                 margin-left: auto;
                 margin-right: auto;
                 margin-top: 1rem;
                 border-radius: .5rem;
+                @include respond (tab-land){
+                    height: 22rem;
+                }
+                @include respond (tab-port){
+                    height: 15rem;
+                }
             }
         }
     }
@@ -46,11 +94,7 @@
     transition: all 1s; 
 
     &:hover{
-        cursor: pointer;
-        transform: rotate(0deg) scale(1.3);
-        transition: all 0.3s; 
-        z-index: 10;
-        box-shadow: 1px 1px 7px rgb(158, 158, 158);
+        @include card-hovering-state;
     }
 }
 

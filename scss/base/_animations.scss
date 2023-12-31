@@ -90,6 +90,18 @@ animation-iteration-count: infinite;
 
 };
 
+@keyframes move-to-right-for-van-short{
+
+    0%{
+        transform: translateX(0rem);
+    }
+
+    100%{
+        transform: translateX(10rem);
+    }
+
+};
+
 
 @keyframes hero-text-animation{
     0%{

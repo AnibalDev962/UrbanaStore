@@ -1,14 +1,19 @@
 nav{
     margin-top: $margin-top-default;
 
-    .nav__links{//this is the container
-        
-        display: flex;
+    @include respond(phone){
+        display: none;
+    }
 
+    .nav__links{//this is the container
+        display: flex;
         align-items: center;
         justify-content: center;
-
         gap: 3rem;
+
+        @include respond (tab-port){
+            gap:1rem;
+        }
 
 
         &__item{

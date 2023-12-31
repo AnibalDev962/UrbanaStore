@@ -5,6 +5,19 @@
     width: 100%;
     background-color: rgb(0, 0, 0);
 
+    
+    @include respond(tab-land){
+            height: 40rem;
+    }
+
+    @include respond(tab-port){
+        height: 30rem;
+    }
+    @include respond(phone){
+        height: 20rem;
+    }
+
+
     &__video-container{
        
         max-width: 200rem;
