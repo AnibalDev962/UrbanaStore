@@ -1,0 +1,97 @@
+//mobile menu//
+.mobile-menu{///THIS IS WHAT REPLACES NORMAL MEDIO WHEN MEDIA QUERY QUICKS IN
+    visibility: hidden;
+    opacity: 0;
+    position: fixed;
+    
+    
+    @include respond(phone){
+    visibility: visible;
+    opacity: 1;
+    
+    width: 100vw;
+    background-color: white;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 29;
+
+    &__logo{
+        height: 4rem;
+        margin-left: 1rem;
+    }
+    &__icon{
+        font-size: 4rem;
+        margin-right: 1rem;
+    }
+}
+   
+};
+
+///MODAL///
+
+.mobile-menue-modal{
+    position: fixed;
+    background-color:$main-color;
+    height: 100vh;
+    width: 100vw;
+    z-index: 50;
+
+    visibility: hidden;
+    opacity: 0;
+   
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &__close-button{
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        z-index: 66;
+        height: 4rem;
+        width: 4rem;
+    };
+
+    &__container{
+
+
+      &__item{
+        list-style: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &__link{
+            color: white;
+            text-decoration: none;
+            font-size: 3.5rem;
+        }
+      }
+    }    
+}
+
+//functionaity//
+
+
+
+.mobile-menue-visible{
+    visibility: visible;
+    opacity: 1;
+    animation-name: circle-in-top-right;
+    animation-duration: 1s;
+};
+
+.pollito{
+    animation-name: circle-out-top-right;
+    animation-duration: 1s;
+
+}
+
+
+
+
+
+
+ 

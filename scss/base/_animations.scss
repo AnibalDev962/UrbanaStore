@@ -115,4 +115,36 @@ animation-iteration-count: infinite;
         text-shadow:2px 2px 10px grey;
     }
 
+};
+
+//ANIMATIONS FOR MOBILE MENUE///
+
+@keyframes circle-in-top-right {
+    from {
+        clip-path: circle(0% at top right);
+    }
+    to {
+      clip-path: circle(125%);
+    }
 }
+
+@keyframes circle-out-top-right {
+    0% {
+        visibility: visible;
+        opacity: 1;
+        clip-path: circle(125%);
+      
+    }
+    99% {
+        visibility: visible;
+        opacity: 1;
+        clip-path: circle(0% at top right);
+      
+    }
+    100%{
+        visibility: hidden;
+        opacity: 0;
+    }
+
+}
+  

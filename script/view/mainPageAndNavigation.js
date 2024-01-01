@@ -20,3 +20,23 @@ document.querySelector('.nav__links').addEventListener('click', function (e) {
     }
   });
 
+//MOBILE MENUE//
+
+const mobileMenueButtonClose=document.querySelector('.mobile-menue-modal__close-button');
+const mobileMenueOpen=document.querySelector('.mobile-menu');
+const mobileMenue=document.querySelector('.mobile-menue-modal');
+
+//OPENNING//
+mobileMenueOpen.addEventListener('click',function(){
+ mobileMenue.classList.remove('pollito');
+ mobileMenue.classList.add('mobile-menue-visible');
+  
+})
+//CLOSING//
+mobileMenueButtonClose.addEventListener('click',function(){
+  mobileMenue.classList.remove('mobile-menue-visible');
+  mobileMenue.classList.add('pollito');
+
+
+})
+
