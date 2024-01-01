@@ -1,14 +1,13 @@
+
 //COPYRIGHT TEXT//
 let dateForFooter=new Date();
-
 let yearForFooter=dateForFooter.getFullYear();
-//entering the year to the footer//
-
 let spanForYearInTheHtml=document.querySelector('.year-span');
 
 export const insertYearForCopyRightText=function(){
     spanForYearInTheHtml.textContent=yearForFooter;
-}
+};
+
 //SMOOTH SCROLLING///
 
 document.querySelector('.nav__links').addEventListener('click', function (e) {
@@ -50,6 +49,29 @@ mobileInMenueLinks.forEach(function(e){
   })
 })
 
+////WEBSITE UNDER CONSTRUCTION MODAL///
+
+//pending section buttons//
+const pendingSectionButtons=document.querySelectorAll('.pending-section');
+const pendingSectionModal=document.querySelector('.under-construction-modal');
+const goBackButtonOnModal=document.querySelector('.under-construction-modal__button');
+const openOrCloseUnderConstructionMessage=function(action){
+  if(action==='open'){
+    pendingSectionModal.classList.add('under-construction-modal-visible');   
+   }else if(action==='close'){
+    pendingSectionModal.classList.remove('under-construction-modal-visible');   
+   }
+};
+
+pendingSectionButtons.forEach(function(e){
+  e.addEventListener('click',function(){
+    openOrCloseUnderConstructionMessage('open');
+  })
+})
+
+goBackButtonOnModal.addEventListener('click',function(){
+  openOrCloseUnderConstructionMessage('close');
+})
 
 
 

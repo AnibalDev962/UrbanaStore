@@ -1,0 +1,41 @@
+.under-construction-modal{
+
+    position: fixed;
+    top:0;
+    left: 0;
+    z-index: 100;
+    background-color: white;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    visibility: hidden;
+    opacity: 0;
+
+    &__img{
+        height: 30rem;
+        
+    }
+    &__button{
+        color: white;
+        font-size: 4rem;
+        margin-top: 2rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        background-color: $main-color;
+        border: none;
+        border-radius: 3rem;
+
+        &:hover{
+            cursor: pointer;
+        }
+    }
+};
+
+.under-construction-modal-visible{
+    visibility: visible;
+    opacity: 1;
+}
