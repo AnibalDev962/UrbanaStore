@@ -45,10 +45,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    
+    
     &__close-button{
         position: absolute;
-        top: 1rem;
-        right: 1rem;
+        top: 0.4rem;
+        right: 0.8rem;
         z-index: 66;
         height: 4rem;
         width: 4rem;
@@ -57,7 +59,9 @@
     &__container{
 
 
+
       &__item{
+        margin-top: 2rem;
         list-style: none;
         display: flex;
         align-items: center;
@@ -67,6 +71,8 @@
             color: white;
             text-decoration: none;
             font-size: 3.5rem;
+
+           
         }
       }
     }    

@@ -25,18 +25,31 @@ document.querySelector('.nav__links').addEventListener('click', function (e) {
 const mobileMenueButtonClose=document.querySelector('.mobile-menue-modal__close-button');
 const mobileMenueOpen=document.querySelector('.mobile-menu');
 const mobileMenue=document.querySelector('.mobile-menue-modal');
+const mobileInMenueLinks=document.querySelectorAll('.mobile-menue-modal__container__item__link');
 
-//OPENNING//
+const openCloseMobileMenue=function(action){
+   if(action==='open'){
+    mobileMenue.classList.remove('pollito');
+    mobileMenue.classList.add('mobile-menue-visible');
+   }else if(action==='close'){
+    mobileMenue.classList.remove('mobile-menue-visible');
+    mobileMenue.classList.add('pollito');
+   }
+};
+
 mobileMenueOpen.addEventListener('click',function(){
- mobileMenue.classList.remove('pollito');
- mobileMenue.classList.add('mobile-menue-visible');
-  
-})
-//CLOSING//
+  openCloseMobileMenue('open');
+});
 mobileMenueButtonClose.addEventListener('click',function(){
-  mobileMenue.classList.remove('mobile-menue-visible');
-  mobileMenue.classList.add('pollito');
-
-
+  openCloseMobileMenue('close');
 })
+
+mobileInMenueLinks.forEach(function(e){
+  e.addEventListener('click',function(){
+    openCloseMobileMenue('close');
+  })
+})
+
+
+
 
