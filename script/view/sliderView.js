@@ -163,7 +163,7 @@ export const goToSlide=function(pos,direction){
         goToSlide(pos,'right')
     };
 
-  },4000);
+  },10000);
 
 
 export const activeDot=function(dotNumber){
