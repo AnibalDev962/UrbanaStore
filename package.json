@@ -17,6 +17,6 @@
     "core-js": "^3.34.0",
     "fractional": "^1.0.0",
     "regenerator-runtime": "^0.14.0"
-  }
-  
+  },
+  "browserslist": "> 0.5%, last 2 versions, not dead"
 }
