@@ -150,7 +150,7 @@ export const goToSlide=function(pos,direction){
   });
 
 
-  sliderInterval=setInterval(function(){
+  const sliderInterval=setInterval(function(){
 
     let slidesLenght=slidesAmout-1;
 
