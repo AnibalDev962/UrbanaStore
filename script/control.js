@@ -24,5 +24,3 @@ genderSelectionData.hoveringFunctionality();
 //controling page copyright updating year//
 mainPageData.insertYearForCopyRightText();
 
-///
-
