@@ -24,3 +24,10 @@ genderSelectionData.hoveringFunctionality();
 //controling page copyright updating year//
 mainPageData.insertYearForCopyRightText();
 
+///
+
+const productsSelected=function(){
+    let product='';
+
+};
+
