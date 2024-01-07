@@ -3,6 +3,7 @@
 let dateForFooter=new Date();
 let yearForFooter=dateForFooter.getFullYear();
 let spanForYearInTheHtml=document.querySelector('.year-span');
+const buttonsToMoveToProducts=document.querySelectorAll('.move-to-products');
 
 export const insertYearForCopyRightText=function(){
     spanForYearInTheHtml.textContent=yearForFooter;
@@ -10,14 +11,14 @@ export const insertYearForCopyRightText=function(){
 
 //SMOOTH SCROLLING///
 
-/* document.querySelector('.nav__links').addEventListener('click', function (e) {
+document.querySelector('.nav__links').addEventListener('click', function (e) {
     e.preventDefault();
     // Matching strategy
     if (e.target.classList.contains('nav__links__item__link')) {
       const id = e.target.getAttribute('href');
       document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
     }
-  }); */
+  }); 
 
 //MOBILE MENUE//
 
@@ -71,6 +72,15 @@ pendingSectionButtons.forEach(function(e){
 
 goBackButtonOnModal.addEventListener('click',function(){
   openOrCloseUnderConstructionMessage('close');
+})
+
+buttonsToMoveToProducts.forEach(function(e){
+  e.addEventListener('click',function(y){
+    console.log(y.target.id)
+    ///send id to local storage//
+
+    //move to 
+  })
 })
 
 
