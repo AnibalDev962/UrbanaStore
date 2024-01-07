@@ -53,6 +53,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    /* overflow: hidden;
+   -webkit-overflow-scrolling: touch; *///this is removed as this uses fixed position not absolute//
     
     
     

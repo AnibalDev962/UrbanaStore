@@ -10,14 +10,14 @@ export const insertYearForCopyRightText=function(){
 
 //SMOOTH SCROLLING///
 
-document.querySelector('.nav__links').addEventListener('click', function (e) {
+/* document.querySelector('.nav__links').addEventListener('click', function (e) {
     e.preventDefault();
     // Matching strategy
     if (e.target.classList.contains('nav__links__item__link')) {
       const id = e.target.getAttribute('href');
       document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
     }
-  });
+  }); */
 
 //MOBILE MENUE//
 
