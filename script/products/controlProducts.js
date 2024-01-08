@@ -1,6 +1,13 @@
 import * as productData from '../products/productsDataBase';
 
-console.log('hello world');
-console.log(document.querySelector('.texto22'));
+let idReceived=JSON.parse(localStorage.getItem('id'));
 
-console.log(productData.products.female.shoes);
+const localStorageClear=function(){
+    localStorage.removeItem('id');
+}
+
+document.querySelector('.texto22').textContent=idReceived;
+console.log(idReceived);
+localStorageClear();
+
+

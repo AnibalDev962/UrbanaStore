@@ -3,7 +3,6 @@
 let dateForFooter=new Date();
 let yearForFooter=dateForFooter.getFullYear();
 let spanForYearInTheHtml=document.querySelector('.year-span');
-const buttonsToMoveToProducts=document.querySelectorAll('.move-to-products');
 
 export const insertYearForCopyRightText=function(){
     spanForYearInTheHtml.textContent=yearForFooter;
@@ -50,10 +49,10 @@ mobileInMenueLinks.forEach(function(e){
   })
 })
 
-////WEBSITE UNDER CONSTRUCTION MODAL///
+////WEBSITE UNDER CONSTRUCTION MODAL/// disbled code, it used to give a pop up advisinf website is not fully built yet
 
 //pending section buttons//
-const pendingSectionButtons=document.querySelectorAll('.pending-section');
+/* const pendingSectionButtons=document.querySelectorAll('.pending-section');
 const pendingSectionModal=document.querySelector('.under-construction-modal');
 const goBackButtonOnModal=document.querySelector('.under-construction-modal__button');
 const openOrCloseUnderConstructionMessage=function(action){
@@ -73,15 +72,33 @@ pendingSectionButtons.forEach(function(e){
 goBackButtonOnModal.addEventListener('click',function(){
   openOrCloseUnderConstructionMessage('close');
 })
+ */
 
-buttonsToMoveToProducts.forEach(function(e){
-  e.addEventListener('click',function(y){
-    console.log(y.target.id)
-    ///send id to local storage//
+//// function move to products//
 
-    //move to 
+//step1//
+const buttons=document.querySelectorAll('.move-to-products');
+
+
+buttons.forEach(function(e){
+  let id='';
+  e.addEventListener('click',function(c){
+    id=e.querySelector('.products__container__card__img-container').id;
+    //id is obtained//
+    //sending id to local storage//
+
+    sendIdToLocalStorage(id);
+
+    //moving to next page//
+
+    window.location.href='./products.html';
+    
   })
+  
 })
 
+const sendIdToLocalStorage=function(argument){
+  localStorage.setItem('id', JSON.stringify(argument));
+};
 
 

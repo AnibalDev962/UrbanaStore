@@ -26,8 +26,4 @@ mainPageData.insertYearForCopyRightText();
 
 ///
 
-const productsSelected=function(){
-    let product='';
-
-};
 

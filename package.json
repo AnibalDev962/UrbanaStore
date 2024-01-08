@@ -4,8 +4,8 @@
   "description": "Style and Fashion Store project",
   "default": "index.html",
   "scripts": {
-    "start": "parcel index.html",
-    "build": "parcel build index.html"
+    "start": "parcel index.html products.html",
+    "build": "parcel build index.html products.html"
   },
   "author": "Anibal Palacios",
   "license": "ISC",
