@@ -79,7 +79,6 @@ goBackButtonOnModal.addEventListener('click',function(){
 //step1//
 const buttons=document.querySelectorAll('.move-to-products');
 
-
 buttons.forEach(function(e){
   let id='';
   e.addEventListener('click',function(c){
@@ -95,7 +94,7 @@ buttons.forEach(function(e){
     
   })
   
-})
+});
 
 const sendIdToLocalStorage=function(argument){
   localStorage.setItem('id', JSON.stringify(argument));

@@ -13,10 +13,85 @@
     <link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Montserrat:wght@200;300;500;700&family=Mrs+Saint+Delafield&family=Pinyon+Script&family=Roboto:wght@300;500&family=Rock+Salt&display=swap" rel="stylesheet">
     <!-- script -->
     <script type="module" src="/script/products/controlProducts.js"></script>
-
 </head>
 <body>
-    <P class="texto22">Products section is under development</P>
-    
+    <div class="mobile-menue-modal">
+        <button class="mobile-menue-modal__close-button">x</button>
+        <ul class="mobile-menue-modal__container">
+            <li class="mobile-menue-modal__container__item">
+                <a class="mobile-menue-modal__container__item__link" href="/index.html">Home2</a>
+            </li>
+            <li class="mobile-menue-modal__container__item">
+                <a class="mobile-menue-modal__container__item__link" href="#section--2">Products</a>
+            </li>
+            <li class="mobile-menue-modal__container__item">
+                <a class="mobile-menue-modal__container__item__link" href="#section--3">Contact us</a>
+            </li>
+            <li class="mobile-menue-modal__container__item">
+                <a class="mobile-menue-modal__container__item__link pending-section" href="#section--4">Staff</a>
+            </li>
+            <li class="mobile-menue-modal__container__item">
+                <a class="mobile-menue-modal__container__item__link pending-section" href="#section--5">How to buy?</a>
+            </li>
+          
+        </ul>
+    </div>
+    <header>
+        <div class="header-logos-container" id="section--1">
+            <div class="header-logos-container__social-media-logos">
+                <ion-icon class="header-logos-container__social-media-logos__logo" name="logo-facebook"></ion-icon>
+                <ion-icon class="header-logos-container__social-media-logos__logo" name="logo-instagram"></ion-icon>
+                <ion-icon class="header-logos-container__social-media-logos__logo" name="logo-twitter"></ion-icon>
+                <ion-icon class="header-logos-container__social-media-logos__logo" name="logo-youtube"></ion-icon>
+            </div>
+            <img class="header-logos-container__main-logo" src="/src/img/logo/finalLogo.png" alt="company logo">
+        </div>
+        <div class="mobile-menu">
+            <img class="mobile-menu__logo" src="/src/img/logo/finalLogo.png" alt="company main logo">
+            <ion-icon class="mobile-menu__icon" name="menu-outline"></ion-icon>
+        </div>
+        <nav>
+            <ul class="nav__links">
+                <li class="nav__links__item ">
+                    <a class="nav__links__item__link" href="/index.html">Home</a>
+                </li>
+                <li class="nav__links__item ">
+                    <a class="nav__links__item__link" href="#section--2">Products</a>
+                </li>
+                <li class="nav__links__item">
+                    <a class="nav__links__item__link" href="#section--3">Contact us</a>
+                </li>
+                <li class="nav__links__item">
+                    <a class="nav__links__item__link pending-section" href="#section--4">Staff</a>
+                </li>
+                <li class="nav__links__item">
+                    <a class="nav__links__item__link pending-section" href="#section--5">How to buy?</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <section class="products-section">
+        <div class="products-section__container">
+            <div class="products-section__container__selection">
+                <h2 class="products-section__container__selection__header-text">Filter Products</h2>
+                <ul class="products-section__container__selection__list-container">
+                    <li class="products-section__container__selection__list-container__list-el">All products</li>
+                    <li class="products-section__container__selection__list-container__list-el">Selected Products ❤️</li>
+                    <li class="products-section__container__selection__list-container__list-el drop-down-link">Women  &#11167;</li>
+                    <li class="products-section__container__selection__list-container__list-el drop-down-link">Men &#11167;</li>
+                    <li class="products-section__container__selection__list-container__list-el drop-down-link">Kinds  &#11167;</li>
+                    
+                </ul>
+
+            </div>
+            <div class="products-section__container__skeleton">
+                
+            </div>
+
+        </div>
+    </section>
+   
+    <script  src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
