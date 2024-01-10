@@ -33,42 +33,57 @@ mobileInMenueLinks.forEach(function(e){
 //// Products filter functionality//
 
 const productOptions=document.querySelectorAll('.products-section__container__selection__list-container__list-el');
-let subLinksActive=false;
-const maleSubMenue='';
-const femaleSubMenue=`
-<li class="products-section__container__selection__list-container__list-el drop-down-link sub-link" id="women-clothes"><ion-icon name="ellipse-outline" class="products-selector-icon"></ion-icon>clothes</li>
-<li class="products-section__container__selection__list-container__list-el drop-down-link sub-link" id="women-glasses"><ion-icon name="ellipse-outline" class="products-selector-icon"></ion-icon>glasses</li>
-<li class="products-section__container__selection__list-container__list-el drop-down-link sub-link" id="women-jewelry"><ion-icon name="ellipse-outline" class="products-selector-icon"></ion-icon>jewelry</li>
-<li class="products-section__container__selection__list-container__list-el drop-down-link sub-link" id="women-shoes"><ion-icon name="ellipse-outline" class="products-selector-icon"></ion-icon>shoes</li>
-<li class="products-section__container__selection__list-container__list-el drop-down-link sub-link" id="women-watches"><ion-icon name="ellipse-outline" class="products-selector-icon"></ion-icon>watches</li>`
-const kidsSubmenue='';
+const linksThatHaveSubLinks=document.querySelectorAll('.drop-down-link');
+const allLinksWithNoSubMenues=document.querySelectorAll('.products-section__container__selection__list-container__list-el');
 
-productOptions.forEach(function(e){
-    let dropDownMenueToCLose='';
-    let dropDownMenuToOpen='';
 
-    e.addEventListener('click',function(i){
-        //erase all previously opened sublinks before//
-        
-        if(i.target.classList[0]==='arrow-icon-products'){
-            dropDownMenuToOpen=i.target.parentNode;
-            //parent node is selected at this point/
-            
-            dropDownMenuToOpen.insertAdjacentHTML('afterend',`${femaleSubMenue}`)
-            wrapAllSubMenues();
-            subLinksActive=true;
+linksThatHaveSubLinks.forEach(function(el) { 
+  el.addEventListener('click',function(e){
 
-        }
-        
+    if(e.target.classList.contains('arrow-icon-products') & !e.target.parentNode.classList.contains('selected-sub-link')){
+      //arrows are targetted//
+      e.target.classList.add('openned');
+      const identificatorToRemoveHidden=e.target.parentNode.id;
+      //id adquired//
+      const elToShow=document.querySelector(`.${identificatorToRemoveHidden}-sub-menue`);
+      elToShow.classList.remove('sub-menue-hidden');
+      e.target.parentNode.classList.add('selected-sub-link');
 
-    })
+      
+    }else if(e.target.classList.contains('arrow-icon-products') & e.target.parentNode.classList.contains('selected-sub-link')){
+      e.target.classList.remove('openned');
+      const identifierToRemove=e.target.parentNode.id;
+      console.log(identifierToRemove);
+      const elToRemove=document.querySelector(`.${identifierToRemove}-sub-menue`);
+      elToRemove.classList.add('sub-menue-hidden');
+      e.target.parentNode.classList.remove('selected-sub-link');
+      
+    };
+
+  });
+
 })
 
-const wrapAllSubMenues=function(){
-    if(subLinksActive===false){
-        return;
-    }else if(subLinksActive===true){ 
-    const subLinksToRemove=document.querySelectorAll('.sub-link');
-    subLinksToRemove.remove();
-   }
-}
+allLinksWithNoSubMenues.forEach(function(el){
+  el.addEventListener('click',function(event){
+    if(event.target.classList.contains('products-section__container__selection__list-container__list-el')){
+      console.log(event.target);
+      //mark icon as selected//
+      let elToMarkSelected=event.target.id
+      console.log(elToMarkSelected);
+      console.log(elToMarkSelected.firstElementChild);
+      
+      
+
+      
+
+      //call render//
+
+    }
+    
+      
+  })
+
+})
+
+/* name="disc" */

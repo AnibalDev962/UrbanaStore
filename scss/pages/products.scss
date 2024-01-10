@@ -62,12 +62,16 @@
 
         }
     }
-}
+};
+
+//functionality//
 
 .products-selector-icon{
     color:$main-color;
     transform: translateY(0.2rem);
     margin-right: 2rem;
+   
+
 }
 .arrow-icon-products{
     color:$main-color;
@@ -81,6 +85,37 @@
      
 }
 
-.sub-link{
+.sub-link__forWomen{
     margin-left: 2rem;
+}
+
+.openned{
+    transform: rotate(-90deg);
+}
+
+.kids-sub-menue{
+    list-style: none;
+  
+}
+
+.men-sub-menue{
+    list-style: none;
+    
+}
+
+.women-sub-menue{
+    list-style: none;
+   
+    
+}
+
+.sub-menue-hidden{
+    display: none;
+    
+}
+
+.sub-link{
+    margin-left: 3rem;
+    list-style: none;
+    margin-bottom: 1rem;
 }
