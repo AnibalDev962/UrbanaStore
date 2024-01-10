@@ -78,6 +78,7 @@ goBackButtonOnModal.addEventListener('click',function(){
 
 //step1//
 const buttons=document.querySelectorAll('.move-to-products');
+const redirectionElements=document.querySelectorAll('.redirection-element');
 
 buttons.forEach(function(e){
   let id='';
@@ -100,4 +101,18 @@ const sendIdToLocalStorage=function(argument){
   localStorage.setItem('id', JSON.stringify(argument));
 };
 
+///same as above but these are the all other elements//
 
+redirectionElements.forEach(function(e){
+  e.addEventListener('click',function(c){
+    console.log('clicked');
+    ///listem to click/
+
+    //read id//
+
+    //redirects using id//
+
+
+    
+  })
+})

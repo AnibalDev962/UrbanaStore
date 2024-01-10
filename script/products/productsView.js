@@ -35,6 +35,7 @@ mobileInMenueLinks.forEach(function(e){
 const productOptions=document.querySelectorAll('.products-section__container__selection__list-container__list-el');
 const linksThatHaveSubLinks=document.querySelectorAll('.drop-down-link');
 const allLinksWithNoSubMenues=document.querySelectorAll('.products-section__container__selection__list-container__list-el');
+const allIconsForFilteringProducts=document.querySelectorAll('.products-selector-icon');
 
 
 linksThatHaveSubLinks.forEach(function(el) { 
@@ -64,26 +65,47 @@ linksThatHaveSubLinks.forEach(function(el) {
 
 })
 
-allLinksWithNoSubMenues.forEach(function(el){
-  el.addEventListener('click',function(event){
-    if(event.target.classList.contains('products-section__container__selection__list-container__list-el')){
-      console.log(event.target);
-      //mark icon as selected//
-      let elToMarkSelected=event.target.id
-      console.log(elToMarkSelected);
-      console.log(elToMarkSelected.firstElementChild);
-      
-      
+allLinksWithNoSubMenues.forEach(function(el,i){
+ //i is the index//
+ //el//is th click
+ 
+  
+  el.addEventListener('click',function(e){
+    //getting the id//
 
-      
-
-      //call render//
-
-    }
     
-      
+    //changin the icon style//
+    if(e.target.classList.contains('products-selector-icon') || e.target.classList.contains('products-section__container__selection__list-container__list-el')){ 
+      setIconDefault();
+  
+    let iconToModify=document.querySelector(`.ellipse-${i}`);
+    let idtoCallRender=iconToModify.parentNode.id;
+    let currentAtribute=iconToModify.getAttribute('name');
+    currentAtribute==='ellipse-outline'? iconToModify.setAttribute('name','disc'): iconToModify.setAttribute('name','ellipse-outline');
+
+    //HERE CALL RENDER with i wich is the index 0 based //
+      callRender(idtoCallRender);
+    }else{
+      return;
+    };
+    
   })
 
 })
 
-/* name="disc" */
+
+const setIconDefault=function(){
+  allIconsForFilteringProducts.forEach(function(e){
+    e.setAttribute('name','ellipse-outline');
+  })
+
+}
+
+export const callRender=function(products){
+  console.log(products);
+}
+
+export const optionSelector=function(desiredEl){
+  console.log(desiredEl);
+
+}
