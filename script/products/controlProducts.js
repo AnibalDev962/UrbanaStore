@@ -1,4 +1,5 @@
 import * as productData from '../products/productsDataBase';
+import * as productViw from '../products/productsView';
 
 //incialization//
 
