@@ -30,6 +30,8 @@ mobileInMenueLinks.forEach(function(e){
     openCloseMobileMenue('close');
   })
 });
+
+
 //// Products filter functionality//
 
 const productOptions=document.querySelectorAll('.products-section__container__selection__list-container__list-el');
@@ -66,13 +68,9 @@ linksThatHaveSubLinks.forEach(function(el) {
 })
 
 allLinksWithNoSubMenues.forEach(function(el,i){
- //i is the index//
- //el//is th click
- 
-  
+
   el.addEventListener('click',function(e){
     //getting the id//
-
     
     //changin the icon style//
     if(e.target.classList.contains('products-selector-icon') || e.target.classList.contains('products-section__container__selection__list-container__list-el')){ 
@@ -94,18 +92,35 @@ allLinksWithNoSubMenues.forEach(function(el,i){
 })
 
 
-const setIconDefault=function(){
+const setIconDefault=function(){ ///gives icon their default style
   allIconsForFilteringProducts.forEach(function(e){
     e.setAttribute('name','ellipse-outline');
   })
 
 }
 
-export const callRender=function(products){
-  console.log(products);
+export const callRender=function(products){ ///to reder the selected products
+  console.log(`rendering ${products}`);
 }
 
-export const optionSelector=function(desiredEl){
+export const optionSelector=function(desiredEl){  //selects produc from the list
+  setIconDefault();
   console.log(desiredEl);
+  let iconToUpdate=document.querySelector(`.ellipse-${desiredEl}`);
+  iconToUpdate.setAttribute('name','disc');
+  let itemToRender=iconToUpdate.parentElement.id
+  deployDropDown(desiredEl);
 
+  
 }
+
+///collapse forced// unable to uncolapse///
+const deployDropDown=function(elNumber){
+  if(elNumber>2 && elNumber <8){
+    document.querySelector('.forWomen-sub-menue').classList.remove('sub-menue-hidden');
+    document.querySelector('.arrow-to-collapse').classList.add('openned');
+    document.getElementById('forWomen').classList.add('selected-sub-link');
+
+  }
+};
+

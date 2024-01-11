@@ -100,16 +100,20 @@ const sendIdToLocalStorage=function(argument){
 
 ///same as above but these are the all other elements//
 
+console.log(redirectionElements);
+
 redirectionElements.forEach(function(e){
+  
   e.addEventListener('click',function(c){
     ///listem to click/
     //read id//
     let idForProducts=c.target.id;
     console.log(idForProducts);
+    console.log('function callled');
 
     //redirects using id//
     sendIdToLocalStorage(idForProducts);
-    
+
     window.location.href='./products.html';
   })
 })
