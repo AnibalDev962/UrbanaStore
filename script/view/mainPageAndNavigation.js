@@ -86,11 +86,8 @@ buttons.forEach(function(e){
     id=e.querySelector('.products__container__card__img-container').id;
     //id is obtained//
     //sending id to local storage//
-
     sendIdToLocalStorage(id);
-
     //moving to next page//
-
     window.location.href='./products.html';
     
   })
@@ -105,14 +102,14 @@ const sendIdToLocalStorage=function(argument){
 
 redirectionElements.forEach(function(e){
   e.addEventListener('click',function(c){
-    console.log('clicked');
     ///listem to click/
-
     //read id//
+    let idForProducts=c.target.id;
+    console.log(idForProducts);
 
     //redirects using id//
-
-
+    sendIdToLocalStorage(idForProducts);
     
+    window.location.href='./products.html';
   })
 })
