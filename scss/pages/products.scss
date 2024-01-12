@@ -21,6 +21,8 @@
         
         @include respond(phone){
             margin-top: 7rem;
+            margin-bottom: 0rem;
+            flex-direction: column;
         }
 
         &__selection{
@@ -30,6 +32,7 @@
             margin-top: 1rem;
             flex-grow: 0.4;
 
+           
             
             &__list-container{
                 margin-top: 2rem;
@@ -61,15 +64,20 @@
             border-left: 0.1rem solid gray;
             height: auto;
             flex-grow: 3;
-            overflow-y: scroll;
+            /* overflow-y: scroll; */
             display: grid;
             position: relative;
 
             grid-template-columns: repeat(auto-fit,minmax(25rem, 1fr));
 
+            
+
+          
+
             &__cart-container{
                 position: absolute;
-                right:0;
+                
+                right:1rem;
                 top: -2rem;
                 z-index: 10;
                 background-color: $main-color;
@@ -79,17 +87,25 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                &:hover{
+                    cursor: pointer;
+                }
+
+              
                 &__icon{
                     font-size: 4rem;
                     color: aliceblue
 
                 }
                 &__bubble{
+                    position: absolute;
                     background-color: gold;
                     font-size: 2rem;
                     font-weight: 400;
                     border-radius: 20rem;
-                    transform: translateY(1rem);
+                    padding: 0 .7rem 0 .7rem;
+                    right: 0rem;
+                    bottom: 0rem;  
                     
                 }
 
@@ -109,7 +125,7 @@
 .product-article{
     overflow: hidden;
     margin-top: 3rem;
-    margin-left: 2rem;
+    margin-left: 1rem;
     height: 35rem;
     width: 25rem;
     
@@ -120,8 +136,14 @@
     align-items:baseline;
     border: solid grey 0.1rem;
     border-radius: 5%;
+    border: none;
 
+    @include respond(phone){
+        justify-self: center;
+        height: 40rem;
+        border: none;
     
+    }
 
     &__img{
         
@@ -149,15 +171,22 @@
     &__price{
         font-size: 2rem;
         font-weight: 400;
+        margin-left: 2rem;
     }
     &__items-available{
         font-size: 1.7rem;
+        margin-left: 2rem;
     }
     &__add-to-cart-container{
         position: absolute;
         bottom: 4rem;
-        right: 2rem;
+        right: 1rem;
         display: flex;
+
+        @include respond(phone){
+            bottom: 5rem;
+        }
+
         &__minus-button{
             background-color: $main-color-light;
             font-size: 2rem;
@@ -170,7 +199,14 @@
             &:hover{
                 cursor: pointer;
             }
+
+            @include respond(phone){
+                height: 5rem;
+                width: 3rem;
+                border-radius: 20rem;
+            }
         }
+
         &__plus-button{
             font-weight: 700;
             background-color: $main-color-light;
@@ -183,17 +219,26 @@
             &:hover{
                 cursor: pointer;
             }
+            @include respond(phone){
+                height: 5rem;
+                width: 3rem;
+                border-radius: 20rem;
+            }
 
         }
         &__amount-indicator{
             font-size: 2rem;
+
+            @include respond(phone){
+                font-size: 3rem;
+            }
         }
         
     }
     &__add-to-cart-button{
         position: absolute;
         font-size: 2rem;
-        bottom: 1rem;
+        bottom: 0rem;
         right: 1rem;
         border: none;
         background-color: gold;
@@ -202,6 +247,10 @@
 
         &:hover{
             cursor: pointer;
+        }
+
+        @include respond(phone){
+            padding: 1rem;
         }
     }
 
@@ -216,6 +265,8 @@
     color:$main-color;
     transform: translateY(0.2rem);
     margin-right: 2rem;
+
+    
    
 
 }
@@ -223,11 +274,16 @@
     color:$main-color;
     transform: translateY(0.5rem);
     margin-left: 2rem;  
+    
+    padding: .6rem;
+    transform: translateY(1rem);
 }
 .arrow-icon-promo{
     color:gold;
     transform: translateY(0.5rem);
     margin-left: 1rem; 
+    padding: .6rem;
+    transform: translateY(1rem);
      
 }
 
@@ -236,7 +292,9 @@
 }
 
 .openned{
-    transform: rotate(-90deg);
+    transform: rotate(-90deg)translateX(-1rem);
+    
+
 }
 
 .kids-sub-menue, .men-sub-menue, .women-sub-menue{
@@ -252,4 +310,62 @@
     list-style: none;
     margin-bottom: 1rem;
     margin-top: 1rem;
+};
+
+//page selector//
+
+.page-selector{
+    height: 7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+    @include respond(phone){
+        transform: translateX(-3rem);
+    }
+    &__prev{
+        font-size: 3rem;
+        width: 4rem;
+        border: none;
+        border-radius: 20rem;
+
+        &:hover{
+            cursor: pointer;
+        }
+
+    }
+    &__next{
+        font-size: 3rem;
+        width: 4rem;
+        border: none;
+        border-radius: 20rem;
+        &:hover{
+            cursor: pointer;
+        }
+
+    }
+    &__indicator{
+        font-size: 3rem;
+
+    }
+    &__go-up{
+        visibility: hidden;
+        opacity: 0;
+
+        font-size: 3rem;
+        transform: translateX(5rem);
+        background-color: rgb(221, 221, 221);
+        width: 6rem;
+        height: 6rem;
+        border-radius: 20rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @include respond(phone){
+            visibility: visible;
+            opacity: 1;
+        }
+    }
 }
