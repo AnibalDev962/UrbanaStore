@@ -108,7 +108,8 @@ export const optionSelector=function(desiredEl){  //selects produc from the list
   iconToUpdate.setAttribute('name','disc');
   let itemToRender=iconToUpdate.parentElement.id
   deployDropDown(desiredEl);
-  callRender(desiredEl);
+
+  desiredEl===0?callRender('all-products'):callRender(desiredEl);
   
 }
 
@@ -127,8 +128,9 @@ const deployDropDown=function(elNumber){//this function deploys the sub links wh
 
 
   export const callRender=function(criteria){ //❤️❤️❤️RENDERING FUNCTION/to reder the selected products
-
-    console.log(`rendering ${criteria}`);
+  console.log(`rendering ${criteria}`);
+  const skeleton=document.querySelector('.products-section__container__skeleton');
+    
     
     const markUp=`<article class="product-article">
         <img class="product-article__img" src="/src/img/products/kids/clothes/c-5.jpeg">
@@ -143,30 +145,29 @@ const deployDropDown=function(elNumber){//this function deploys the sub links wh
             <button class="product-article__add-to-cart-button">add to cart</button>
         </article>`;
 
+    //defining where in the arrays the criteria will be applied//
 
-    let productCriteria='selected';
+    //condition 1//if all products is slected//
+
+    //condition 2// if specific product type is selected//
 
     //read data base//
     Object.entries(productsDataBase.objectTest).forEach(function([key,values]){
 
-      productsDataBase.objectTest[key][0]==='men'?console.log(key):'';
-
-      
-      //printear all promo porducts//
-      
-      
-      
-
-      
+      productsDataBase.objectTest[key].includes('forWomen')?skeleton.insertAdjacentHTML(`afterbegin`,`<article class="product-article">
+      <img class="product-article__img" src="/src/img/products/kids/clothes/${values[5]}">
+      <h2 class="product-article__product-name">${values[2]}</h2>
+      <p class="product-article__price">${values[3]}$</p>
+      <p class="product-article__items-available">${values[4]} available</p>
+          <div class="product-article__add-to-cart-container">
+              <button class="product-article__add-to-cart-container__minus-button">-</button>
+              <p class="product-article__add-to-cart-container__amount-indicator">0</p>
+              <button class="product-article__add-to-cart-container__plus-button">+</button>
+          </div>
+          <button class="product-article__add-to-cart-button">add to cart</button>
+      </article>`) :'';
     })
 
 
   }
-
-
-  let promoProducts=[];
-
- /*  console.log(productsDataBase.objectTest['men']['nike'][2]==='promo'?promoProducts.push(`${productsDataBase.objectTest['men']['nike']}S`):'no');
-  productsDataBase.objectTest['men']['vans'][2]==='promo'?promoProducts.push(`${productsDataBase.objectTest['men']['nike']}S`):'no'
-  console.log(promoProducts); */
 
