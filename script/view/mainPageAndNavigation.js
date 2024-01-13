@@ -117,3 +117,4 @@ redirectionElements.forEach(function(e){
     window.location.href='./products.html';
   })
 })
+

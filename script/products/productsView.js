@@ -1,3 +1,5 @@
+import * as productsDataBase from './productsDataBase';
+
 //product selector functionality//
 const productDropDownLinks=document.querySelectorAll('.drop-down-link');
 
@@ -120,12 +122,51 @@ const deployDropDown=function(elNumber){//this function deploys the sub links wh
   }
 };
 
-  export const callRender=function(products){ //❤️❤️❤️RENDERING FUNCTION/to reder the selected products
-    console.log(`rendering ${products}`);
 
+
+
+
+  export const callRender=function(criteria){ //❤️❤️❤️RENDERING FUNCTION/to reder the selected products
+
+    console.log(`rendering ${criteria}`);
     
+    const markUp=`<article class="product-article">
+        <img class="product-article__img" src="/src/img/products/kids/clothes/c-5.jpeg">
+        <h2 class="product-article__product-name">brown jacket</h2>
+        <p class="product-article__price">30$</p>
+        <p class="product-article__items-available">7 available</p>
+            <div class="product-article__add-to-cart-container">
+                <button class="product-article__add-to-cart-container__minus-button">-</button>
+                <p class="product-article__add-to-cart-container__amount-indicator">0</p>
+                <button class="product-article__add-to-cart-container__plus-button">+</button>
+            </div>
+            <button class="product-article__add-to-cart-button">add to cart</button>
+        </article>`;
 
 
+    let productCriteria='selected';
+
+    //read data base//
+    Object.entries(productsDataBase.objectTest).forEach(function([key,values]){
+
+      productsDataBase.objectTest[key][0]==='men'?console.log(key):'';
+
+      
+      //printear all promo porducts//
+      
+      
+      
+
+      
+    })
 
 
   }
+
+
+  let promoProducts=[];
+
+ /*  console.log(productsDataBase.objectTest['men']['nike'][2]==='promo'?promoProducts.push(`${productsDataBase.objectTest['men']['nike']}S`):'no');
+  productsDataBase.objectTest['men']['vans'][2]==='promo'?promoProducts.push(`${productsDataBase.objectTest['men']['nike']}S`):'no'
+  console.log(promoProducts); */
+
