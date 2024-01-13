@@ -136,7 +136,7 @@ const deployDropDown=function(elNumber){//this function deploys the sub links wh
     //read data base//
     Object.entries(productsDataBase.objectTest).forEach(function([key,values]){
       productsDataBase.objectTest[key].includes(`${criteria}`)?skeleton.insertAdjacentHTML(`afterbegin`,`<article class="product-article">
-      <img class="product-article__img" src="/src/img/products/kids/clothes/${values[5]}">
+      <img class="product-article__img" src="${values[5]}">
       <h2 class="product-article__product-name">${values[2]}</h2>
       <p class="product-article__price">${values[3]}$</p>
       <p class="product-article__items-available">${values[4]} available</p>

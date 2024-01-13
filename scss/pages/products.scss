@@ -148,7 +148,7 @@
     &__img{
         
         height: 20rem;
-        object-fit: cover;
+        object-fit: contain;
         width: 90%;
         overflow: hidden;
         margin-top: 1rem;
@@ -368,4 +368,8 @@
             opacity: 1;
         }
     }
+}
+
+.img-to-dist-helper{
+
 }
