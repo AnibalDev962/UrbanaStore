@@ -124,23 +124,18 @@ const deployDropDown=function(elNumber){//this function deploys the sub links wh
 };
 
 
-
-
-
   export const callRender=function(criteria){ //❤️❤️❤️RENDERING FUNCTION/to reder the selected products
   console.log(`rendering ${criteria}`);
   const skeleton=document.querySelector('.products-section__container__skeleton');
 
-    //defining where in the arrays the criteria will be applied//
-
-    //condition 1//if all products is slected//
+    //1 clear skeleton//
+    skeleton.innerHTML='';
 
     //condition 2// if specific product type is selected//
 
     //read data base//
     Object.entries(productsDataBase.objectTest).forEach(function([key,values]){
-
-      productsDataBase.objectTest[key].includes('forWomen')?skeleton.insertAdjacentHTML(`afterbegin`,`<article class="product-article">
+      productsDataBase.objectTest[key].includes(`${criteria}`)?skeleton.insertAdjacentHTML(`afterbegin`,`<article class="product-article">
       <img class="product-article__img" src="/src/img/products/kids/clothes/${values[5]}">
       <h2 class="product-article__product-name">${values[2]}</h2>
       <p class="product-article__price">${values[3]}$</p>
@@ -154,6 +149,5 @@ const deployDropDown=function(elNumber){//this function deploys the sub links wh
       </article>`) :'';
     })
 
-
-  }
+  };
 

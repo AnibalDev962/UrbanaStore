@@ -2,15 +2,16 @@
 
 
 export const objectTest={
+    //structure explanation//1st value in array to find by gender, 2nd value to fing by sublink, 3rd value product name, 4th price, 5th unist avail, 6th image path. from 7on these are tags
     
-        "nike":['forWomen','women-shoes','nike',22,3,'c-5.jpeg'],
-        "vans":['forWomen','women-shoes','vans',32,10,''],
-        'timberland':['male','price 44', '23 available', 'no-selected'],
-        "loli":['female','price 22','4 avial','no-selected'],
-        "pepe":['female','price 33','5 avail','selected'],
-        'tato':['female','price 44', '23 available', 'no-selected'],
-        'pepino':['female','price 22','4 avail', 'selected'],
-        "lastOne":['female','men','hello'],
+        1:['forWomen','women-shoes','nike',22,3,'c-5.jpeg','all-products'],
+        2:['forWomen','women-shoes','vans',32,10,'pending','all-products'],
+        3:['forMen','','honda',12222,3,'','all-products'],
+        4:['forMen','','civic',200,45,'','all-products'],
+        5:['forKids','','toyota',23,4,'','all-products'],
+        6:['forMen','', 'peigeot',100,2,'','all-products'],
+        7:['forMen','','ferrari',34,1,'','all-products'],
+        8:['forKids','','dummy',33,4,'','all-products'],
 
 }
 
