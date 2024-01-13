@@ -130,20 +130,6 @@ const deployDropDown=function(elNumber){//this function deploys the sub links wh
   export const callRender=function(criteria){ //❤️❤️❤️RENDERING FUNCTION/to reder the selected products
   console.log(`rendering ${criteria}`);
   const skeleton=document.querySelector('.products-section__container__skeleton');
-    
-    
-    const markUp=`<article class="product-article">
-        <img class="product-article__img" src="/src/img/products/kids/clothes/c-5.jpeg">
-        <h2 class="product-article__product-name">brown jacket</h2>
-        <p class="product-article__price">30$</p>
-        <p class="product-article__items-available">7 available</p>
-            <div class="product-article__add-to-cart-container">
-                <button class="product-article__add-to-cart-container__minus-button">-</button>
-                <p class="product-article__add-to-cart-container__amount-indicator">0</p>
-                <button class="product-article__add-to-cart-container__plus-button">+</button>
-            </div>
-            <button class="product-article__add-to-cart-button">add to cart</button>
-        </article>`;
 
     //defining where in the arrays the criteria will be applied//
 
