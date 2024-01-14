@@ -34,7 +34,7 @@ mobileInMenueLinks.forEach(function(e){
 });
 
 
-//// Products filter functionality//
+//// Products filter links functionality//
 
 const productOptions=document.querySelectorAll('.products-section__container__selection__list-container__list-el');
 const linksThatHaveSubLinks=document.querySelectorAll('.drop-down-link');
@@ -109,7 +109,9 @@ export const optionSelector=function(desiredEl){  //selects produc from the list
   let itemToRender=iconToUpdate.parentElement.id
   deployDropDown(desiredEl);
 
-  desiredEl===0?callRender('all-products'):callRender(desiredEl);
+  
+  
+  callRender(productsDataBase.selectedProductsConverter[desiredEl]);
   
 }
 
@@ -134,8 +136,8 @@ const deployDropDown=function(elNumber){//this function deploys the sub links wh
     //condition 2// if specific product type is selected//
 
     //read data base//
-    Object.entries(productsDataBase.objectTest).forEach(function([key,values]){
-      productsDataBase.objectTest[key].includes(`${criteria}`)?skeleton.insertAdjacentHTML(`afterbegin`,`<article class="product-article">
+    Object.entries(productsDataBase.dataBase).forEach(function([key,values]){
+      productsDataBase.dataBase[key].includes(`${criteria}`)?skeleton.insertAdjacentHTML(`afterbegin`,`<article class="product-article">
       <img class="product-article__img" src="${values[5]}">
       <h2 class="product-article__product-name">${values[2]}</h2>
       <p class="product-article__price">${values[3]}$</p>
