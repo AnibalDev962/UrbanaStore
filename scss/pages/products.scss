@@ -138,6 +138,8 @@
     border-radius: 5%;
     border: none;
 
+    transition: all 0.3s;
+
     @include respond(phone){
         justify-self: center;
         height: 40rem;
@@ -371,5 +373,6 @@
 }
 
 .img-to-dist-helper{
+   display: none;
 
 }

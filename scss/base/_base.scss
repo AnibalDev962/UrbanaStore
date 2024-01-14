@@ -47,6 +47,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
   }
   
   html {
+    scroll-behavior: smooth;
     box-sizing: inherit;
     font-size: 62.5%; 
     @include respond(tab-land) { // width < 1200?
