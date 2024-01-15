@@ -128,15 +128,28 @@ const deployDropDown=function(elNumber){//this function deploys the sub links wh
 
   export const callRender=function(criteria){ //❤️❤️❤️RENDERING FUNCTION/to reder the selected products
   console.log(`rendering ${criteria}`);
+  
+  console.log(typeof(criteria));
   const skeleton=document.querySelector('.products-section__container__skeleton');
 
+  let allArticles=document.querySelectorAll('.product-article');
+
+  allArticles.forEach(function(el){
+    el.classList.add('hidden-article');
+  })
+
+  let renderingArticles=document.querySelectorAll(`.${criteria}`);
+   renderingArticles.forEach(function(el){
+    el.classList.remove('hidden-article');
+   })
+
     //1 clear skeleton//
-    skeleton.innerHTML='';
+    /* skeleton.innerHTML=''; */
 
     //condition 2// if specific product type is selected//
 
     //read data base//
-    Object.entries(productsDataBase.dataBase).forEach(function([key,values]){
+    /* Object.entries(productsDataBase.dataBase).forEach(function([key,values]){
       productsDataBase.dataBase[key].includes(`${criteria}`)?skeleton.insertAdjacentHTML(`afterbegin`,`<article class="product-article">
       <img class="product-article__img" src="${values[5]}">
       <h2 class="product-article__product-name">${values[2]}</h2>
@@ -149,7 +162,7 @@ const deployDropDown=function(elNumber){//this function deploys the sub links wh
           </div>
           <button class="product-article__add-to-cart-button">add to cart</button>
       </article>`) :'';
-    })
+    }) */
 
   };
 
