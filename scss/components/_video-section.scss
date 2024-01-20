@@ -1,5 +1,5 @@
 .video-section{
-    margin-top: 5rem;
+    margin-top:10rem;
     
     height: 60rem;
     width: 100%;
@@ -15,6 +15,7 @@
     }
     @include respond(phone){
         height: 20rem;
+        margin-top:7rem;
     }
 
 

@@ -1,4 +1,7 @@
 import * as productsDataBase from './productsDataBase';
+import * as img from 'url:/static/w-1.jpg';
+
+console.log(img);
 
 //product selector functionality//
 const productDropDownLinks=document.querySelectorAll('.drop-down-link');

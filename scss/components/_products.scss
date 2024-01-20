@@ -4,6 +4,9 @@
     margin-right: auto;
     height: 60rem;
     width: 100%;
+    position: relative;
+
+   
 
     @include respond(tab-port){
         height: 40rem;
@@ -15,9 +18,35 @@
         padding-top: 4rem;
         padding-bottom: 4rem;
     }
+
+    &__products-header{
+        margin-top: $margin-top-default;
+        color:$main-color;
+        margin-left: auto;
+        margin-right: auto;
+        display: inline-block;
+        font-family: 'Gochi Hand';
+        font-size: 5rem;
+        
+        margin-left: auto;
+        margin-right: auto;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top:0;
+
+        @include respond(phone){
+            top:0;
+            
+        }
+        
+        
+    }
+
    
 
     &__container{
+        
         max-width:110rem;
         height: 100%;
         margin-left: auto;
@@ -34,19 +63,23 @@
 
         @include respond (tab-port){
             max-width: 60rem;
+            transform: translateY(1.5rem);
         }
 
         @include respond (phone){  
             
             max-width: 60rem;
+            margin-top: 10rem;
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(8rem,1fr));
+            transform: translateY(-1.5rem);
             
         }
 
         
 
         &__card{
+            
             
             height: 35rem;
             width: 27rem;
@@ -140,7 +173,7 @@
     background-size: cover;
 }
 .product-img-2{
-    background-image: url(/src/img/clothes/cl6o.jpg);
+    background-image: url(/src/img/clothes/test44.jpg);
     background-position: center;
     background-size: cover;
 }
