@@ -37,6 +37,8 @@
 
         @include respond(phone){
             top:0;
+            font-size: 3rem;
+            
             
         }
         
@@ -72,7 +74,7 @@
             margin-top: 10rem;
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(8rem,1fr));
-            transform: translateY(-1.5rem);
+            transform: translateY(-3rem);
             
         }
 
